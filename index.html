@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Day 1</title>
+    <style>
+        pre{
+            font-size: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1 style="text-align: center; text-decoration: underline;">JS Day 1</h1>
@@ -55,12 +60,12 @@
         </table>
         <hr>
         <h3>Q .4 What is execution context?</h3>
-        <pre>
+        <p>
             The Execution Context contains the code that's currently running, and everything that aids in its execution.
             During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
-        </pre>
+        </p>
         <hr>
-        <h3>Q .5.What is meant by first class function?</h3><br>
+        <h3>Q .5.What is meant by first class function?</h3>
         <p>In any Programming language, when a function is treated as a variable then it is called as First class Function.<br><li>we can assign a function to a variable</li><br><li>We can pass a function as an argument in other functions.</li><br><li>returning a function</li><br><li>Arrow Functions etc..,Examples are:</li>
             <pre>
                 1.Function to a variable:
@@ -90,7 +95,7 @@
                 console.log(out());
             </pre>
         <hr>
-        <h3>6.What are closures? Give an example of closure</h3><br>
+        <h3>6.What are closures? Give an example of closure</h3>
             <p>clousure is a combination of a function enclosed with its surrounding state(lexical environment).
             A clousure gives you acccess to an outer function scope from an inner function.In js clousures are created
             every time when ever a function is created.</p>
@@ -106,9 +111,9 @@
                 console.log(out);
             </pre>
         <hr>
-        <h3>7.Explain call(),apply(),and bind() methods?</h3><br>
+        <h3>7.Explain call(),apply(),and bind() methods?</h3>
             <p>These three methods are used to invoke a function where we are supposed to pass an object as first argument.we can access the values of the object by using this keyword in function definition.<br><br>Call():Call()method invokes a function in which first argument will be a object and rest of the arguments required by function will be provided as an individual arguments.<br><br>
-            apply():apply() method invokes a function in which the first argument will be an object and rest of arguments will be passed as a array of elements.<br><br>bind():bind() method returns a new function and this function will be having a reference of object passed,now,where ever you wants to use this function in the code you can use it by passing the rest of arguments.
+            apply():apply() method invokes a function in which the first argument will be an object and rest of arguments will be passed as a array of elements.<br><br>bind():bind() method returns a new function and this function will be having a reference of object passed,now,where ever you wants to use this function in the code you can use it by passing the rest of arguments.</p>
             <pre>
                 <!-- let emp1={
                     name:"yogi",
