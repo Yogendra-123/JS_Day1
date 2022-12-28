@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<htm lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 1</title>
+</head>
+<body>
+    <h1 style="text-align: center; text-decoration: underline;">JS Day 1</h1>
+    <div>
+        <h3>Q .1 What is difference between '==' and '===' operator?</h3>
+        <p>Ans. We can say that both are comparison operators and they returned the boolean value.If we talk about '==' operator that
+            is used to compare both the values whereas '===' operator is used to compare both the values as well as it's datatype.
+        </p>
+        <pre>
+            var x="2"
+            var y=2
+            console.log(x==y);
+            console.log(x===y);
+        </pre>
+        <hr>
+        <h3>Q .2 What is the spread operator?</h3>
+        <p>The javascript spread operator(...) used to destructured the non-premitive data types. <br>
+        Ex.- array , objects</p>
+        <pre>
+            const arr1=[1,2,3]
+            const arr2=[4,5,6]
+            const arr=[...arr1,...arr2]
+            console.log(arr)
+        </pre>
+        <hr>
+        <h3>Q .3 What are the differences between var, let and const?</h3>
+        <table width="700px" border="2" align="center">
+            <tr>
+            <th>var</th>
+            <th>let</th>
+            <th>const</th></tr>
+            <tr>
+                <td>The scope of a var variable is functional scope</td>
+                <td>The scope of a let variable is block scope.</td>
+                <td>The scope of a const variable is block scope.</td>
+            </tr>
+            <tr>
+                <td>It can be updated and re-declared into the scope.</td>
+                <td>It can be updated but cannot be re-declared into the scope.</td>
+                <td>It cannot be updated or re-declared into the scope.</td>
+            </tr>
+            <tr>
+                <td>It can be declared without initialization.</td>
+                <td>It can be declared without initialization.</td>
+                <td>It cannot be declared without initialization.</td>
+            </tr>
+
+        </table>
+        <hr>
+        <h3>Q .4 What is execution context?</h3>
+        <pre>
+            The Execution Context contains the code that's currently running, and everything that aids in its execution.
+            During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
+        </pre>
+        <hr>
+        <h3>Q .5.What is meant by first class function?</h3><br>
+        <p>In any Programming language, when a function is treated as a variable then it is called as First class Function.<br><li>we can assign a function to a variable</li><br><li>We can pass a function as an argument in other functions.</li><br><li>returning a function</li><br><li>Arrow Functions etc..,Examples are:</li>
+            <pre>
+                1.Function to a variable:
+                let myfunction=function(){
+                    console.log("hi");
+                }
+                myfunction();
+
+                2.function as a argument:
+                function greet(){
+                    console.log("Happy")
+                }
+                function specialgreet(callback,message){
+                    console.log(callback(),message)
+                }
+                specialgreet(greet,"Hello friend");
+
+                3.return a function:
+                function outer(){
+                    var x=10;
+                    function inner(){
+                        console.log(x);
+                    }
+                    return inner();
+                }
+                let out = outer();
+                console.log(out());
+            </pre>
+        <hr>
+        <h3>6.What are closures? Give an example of closure</h3><br>
+            <p>clousure is a combination of a function enclosed with its surrounding state(lexical environment).
+            A clousure gives you acccess to an outer function scope from an inner function.In js clousures are created
+            every time when ever a function is created.</p>
+            <pre>
+                function outer(){
+                    var x=10;
+                    function inner(){
+                        console.log(x);
+                    }
+                    return inner()
+                }
+                let out=outer()
+                console.log(out);
+            </pre>
+        <hr>
+        <h3>7.Explain call(),apply(),and bind() methods?</h3><br>
+            <p>These three methods are used to invoke a function where we are supposed to pass an object as first argument.we can access the values of the object by using this keyword in function definition.<br><br>Call():Call()method invokes a function in which first argument will be a object and rest of the arguments required by function will be provided as an individual arguments.<br><br>
+            apply():apply() method invokes a function in which the first argument will be an object and rest of arguments will be passed as a array of elements.<br><br>bind():bind() method returns a new function and this function will be having a reference of object passed,now,where ever you wants to use this function in the code you can use it by passing the rest of arguments.
+            <pre>
+                <!-- let emp1={
+                    name:"yogi",
+                    age:22
+                }
+                let emp2={
+                    name:"patidar",
+                    age:24
+                }
+                function greeting(wish1,wish2){
+                    console.log(wish1+`${this.name}`+wish2)
+                }
+                greeting.call(this,"Hello!","How are you!")
+                
+                 
+                greeting.apply(this,emp2,"Good Morning!","Have some tea..")
+                
+                var greeting1=greeting.bind(this,emp1.name)
+                var greeting2=greeting.bind(this,emp2.name)
+                greeting1=("hi","how are you")
+                greeting2=("good night","go to sleep..")
+                console.log(greeting())
+                console.log(greeting()) -->
+                </pre>
+        
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</htm>
